@@ -17,13 +17,13 @@ A virtual Embedded Systems and IoT simulation that models an automated irrigatio
 
 ## 📸 System Architecture & Dashboard
 
-![Control Loop Serial Log](Screenshot 2026-06-28 190731.png)
+![Control Loop Serial Log](Screenshot%202026-06-28%20190731.png)
 * **Figure 1:** Live execution of the control automation loop in Wokwi. The serial log demonstrates the dynamic hysteresis logic: when simulated soil moisture drops below the threshold value (30.0%), the automation triggers an alert (`[ALERT] Soil dry! Turning Pump ON`), flips the `pumpState` to active, and drives GPIO 2 high to illuminate the physical indicator LED.
 
-![Wokwi Hardware Schematic](Screenshot 2026-06-28 190850.png)
+![Wokwi Hardware Schematic](Screenshot%202026-06-28%20190850.png)
 * **Figure 2:** Hardware schematic and circuit architecture designed within the Wokwi simulation environment. The configuration interfaces an ESP32 microcontroller with a DHT22 environmental sensor over single-bus digital data pin GPIO 15, while managing a virtual water pump via a current-limited LED sub-circuit connected to GPIO 2.
 
-![ThingSpeak Cloud Dashboard](Screenshot 2026-06-28 191311.png)
+![ThingSpeak Cloud Dashboard](Screenshot%202026-06-28%20191311.png)
 * **Figure 3:** Real-time multi-field telemetry dashboard on the ThingSpeak Cloud IoT platform. The plots visualize synchronized data streams over a 24-hour window, capturing the immediate correlation between environmental changes (a manipulated spike to 80°C temperature / 0% humidity) and the automated activation of the irrigation system (Pump Status field spiking to binary high 1).
 
 ## ⚙️ How to Run the Simulation
